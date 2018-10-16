@@ -7,11 +7,12 @@ get '/' do
 end
 
 class CoolScore
-  def initialize(name)
+  def initialize(name, age)
     @name = name
+    @age = age
   end
 
 end
 
 
-coolScore = CoolScore.new("Bob")
+#coolScore = CoolScore.new("Bob", 30)
