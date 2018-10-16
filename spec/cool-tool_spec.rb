@@ -1,9 +1,11 @@
 require_relative '../cool-tool.rb'
 
-describe 'test my cool' do
-
-  it 'should test my coolness' do
-
-    true.should == false
+describe 'Cool Score' do
+ 
+  it "Should receive the name of the player" do
+    coolScore = CoolScore.new("Bob")
+    expect name = "Bob"
   end
+
+
 end
