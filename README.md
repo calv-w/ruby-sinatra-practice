@@ -14,7 +14,7 @@ This repo is designed to practice the concepts we've already covered.
  - [ ] Continuous Deployment
  - [ ] Linting
  - [ ] Code coverage reporting
- 
+
 As well as introduce some new:
 
  - [ ] [Rack test](http://sinatrarb.com/testing.html)
@@ -48,3 +48,9 @@ Your cool score is initially zero and is calculated by the following algorithm:
 * If your height is between 1.5 and 1.9 meters your cool score is doubled (after calculating everything above).
 
 The calculation above should produce a numerical cool score as a whole number.
+
+##Set up:
+
+1. Install Sinatra by running 'bundle install'
+2. Command 'ruby cool-tool.rb' to start the web server
+3. Browse to http://localhost:4567    
