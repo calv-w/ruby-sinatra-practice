@@ -1,7 +1,7 @@
 require_relative '../cool-tool.rb'
 
 describe 'Cool Score' do
-  subject { CoolScore.new("Bob", 30) }
+  subject { CoolScore.new("Bob", 30, "Pink") }
 
   it "Persons name" do
     expect(subject.name).to eq "Bob"
@@ -22,10 +22,14 @@ describe 'Cool Score' do
   it 'Last letter of name' do
     expect(subject.lastletter).to eq 'b'
   end
+
+  it 'checks the colour input is received' do
+    expect(subject.colour).to eq "Pink"
+  end
 end
 
 describe 'Test score for age 40' do
-  subject { CoolScore.new("Bob", 40) }
+  subject { CoolScore.new("Bob", 40, "Pink") }
 
   it 'calculates the coolscore' do
     expect(subject.score).to eq 20
@@ -33,7 +37,7 @@ describe 'Test score for age 40' do
 end
 
 describe 'Test score for age 39 to check scores are rounded down' do
-  subject { CoolScore.new("Bob", 39) }
+  subject { CoolScore.new("Bob", 39, "Pink") }
 
   it 'calculates the coolscore' do
     expect(subject.score).to eq 19
@@ -41,7 +45,7 @@ describe 'Test score for age 39 to check scores are rounded down' do
 end
 
 describe 'Test score for age 39 to check first letter of name' do
-  subject { CoolScore.new("Andy", 39) }
+  subject { CoolScore.new("Andy", 39, "Pink") }
 
   it 'calculates the coolscore' do
     expect(subject.score).to eq 29
@@ -49,7 +53,7 @@ describe 'Test score for age 39 to check first letter of name' do
 end
 
 describe 'Test score for age 39 to check last letter of name' do
-    subject { CoolScore.new("Dan", 39) }
+    subject { CoolScore.new("Dan", 39, "Pink") }
 
     it 'calculates the coolscore' do
       expect(subject.score).to eq 33
@@ -57,9 +61,54 @@ describe 'Test score for age 39 to check last letter of name' do
 end
 
 describe 'Test score for age 39 to check first and last letter of name' do
-    subject { CoolScore.new("Alan", 39) }
+    subject { CoolScore.new("Alan", 39, "Pink") }
 
     it 'calculates the coolscore' do
       expect(subject.score).to eq 43
     end
-end
+  end
+
+describe 'Assigns a value to the colour Orange' do
+  subject { CoolScore.new("Alan", 39, "Orange") }
+    it 'assigns a value to Orange' do
+      expect(subject.colourValue).to eq 5
+    end
+
+    it 'calculates the coolscore including the colour Orange' do
+      expect(subject.score).to eq 48
+    end
+  end
+
+describe 'Assigns a value to the colour Red' do
+  subject { CoolScore.new("Alan", 39, "Red") }
+    it 'assigns a value to Red' do
+        expect(subject.colourValue).to eq 3
+    end
+    
+    it 'calculates the coolscore including the colour Red' do
+      expect(subject.score).to eq 46
+    end
+  end
+
+describe 'Assigns a value to the colour Blue' do
+  subject { CoolScore.new("Alan", 39, "Blue") }
+    it 'assigns a value to Blue' do
+      expect(subject.colourValue).to eq -1
+    end
+        
+    it 'calculates the coolscore including the colour Blue' do
+      expect(subject.score).to eq 42
+    end
+  end
+
+  describe 'Assigns a value to the colour Green' do
+    subject { CoolScore.new("Alan", 39, "Green") }
+      it 'assigns a value to Green' do
+        expect(subject.colourValue).to eq -5
+      end
+          
+      it 'calculates the coolscore including the colour Green' do
+        expect(subject.score).to eq 38
+    end
+  end
+

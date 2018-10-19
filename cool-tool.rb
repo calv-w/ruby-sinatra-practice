@@ -9,26 +9,27 @@ end
 
 class CoolScore
 
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :colour
 
-  def initialize(name, age)
+  def initialize(name, age, colour)
     @name = name
     @age = age
+    @colour = colour
   end
 
   def score
 
     if
-      name[0] == 'A' && name[-1] =='n'
-        score = ((age * 0.5).floor) + 24
+      firstletter == 'A' && lastletter =='n'
+        score = ((age * 0.5).floor) + 24 + colourValue
     elsif
-      name[0] == 'A'
-        score = ((age * 0.5).floor) + 10
+      firstletter == 'A'
+        score = ((age * 0.5).floor) + 10 + colourValue
     elsif
-      name[-1] == 'n'
-        score = ((age * 0.5).floor) + 14
+      lastletter == 'n'
+        score = ((age * 0.5).floor) + 14 + colourValue
     else
-      score = (age * 0.5).floor
+      score = (age * 0.5).floor + colourValue
     end
   end
 
@@ -38,6 +39,23 @@ class CoolScore
 
   def lastletter
     name[-1]
+  end
+
+  def colourValue
+    if
+      colour == "Orange"
+      colourValue = 5
+    elsif
+      colour == "Red"
+      colourValue = 3
+    elsif
+      colour == "Blue"
+      colourValue = -1
+    elsif
+      colour == "Green"
+      colourValue = -5
+    else colourValue = 0
+    end
   end
 end
 
