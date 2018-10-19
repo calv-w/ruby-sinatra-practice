@@ -1,12 +1,13 @@
 require_relative '../cool-tool.rb'
 
 describe 'Cool Score' do
-  subject { CoolScore.new }
+  subject { CoolScore.new("Bob", 30) }
 
-  it "Should receive the name of the player" do
-    coolScore = CoolScore.new("Bob", 40)
-    expect name = "Bob"
-    expect age = 40
+  it "Persons name" do
+    expect(subject.name).to eq "Bob"
   end
 
+  it "Persons age" do
+    expect(subject.age).to eq 30
+  end
 end
