@@ -17,7 +17,7 @@ class CoolScore
   end
 
   def score
-    score = 15
+    score = (age * 0.5).floor
   end
 
 end
