@@ -14,6 +14,14 @@ describe 'Cool Score' do
   it 'calculates the coolscore' do
     expect(subject.score).to eq 15
   end
+
+  it 'First letter of name' do
+    expect(subject.firstletter).to eq 'B'
+  end
+
+  it 'Last letter of name' do
+    expect(subject.lastletter).to eq 'b'
+  end
 end
 
 describe 'Test score for age 40' do
@@ -30,4 +38,28 @@ describe 'Test score for age 39 to check scores are rounded down' do
   it 'calculates the coolscore' do
     expect(subject.score).to eq 19
   end
+end
+
+describe 'Test score for age 39 to check first letter of name' do
+  subject { CoolScore.new("Andy", 39) }
+
+  it 'calculates the coolscore' do
+    expect(subject.score).to eq 29
+  end
+end
+
+describe 'Test score for age 39 to check last letter of name' do
+    subject { CoolScore.new("Dan", 39) }
+
+    it 'calculates the coolscore' do
+      expect(subject.score).to eq 33
+    end
+end
+
+describe 'Test score for age 39 to check first and last letter of name' do
+    subject { CoolScore.new("Alan", 39) }
+
+    it 'calculates the coolscore' do
+      expect(subject.score).to eq 43
+    end
 end
