@@ -1,7 +1,7 @@
 require_relative '../cool-tool.rb'
 
 describe 'Cool Score' do
-  subject { CoolScore.new("Bob",30) }
+  subject { CoolScore.new("Bob", 30) }
 
   it "Persons name" do
     expect(subject.name).to eq "Bob"
