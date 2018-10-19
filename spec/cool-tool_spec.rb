@@ -15,3 +15,19 @@ describe 'Cool Score' do
     expect(subject.score).to eq 15
   end
 end
+
+describe 'Test score for age 40' do
+  subject { CoolScore.new("Bob", 40) }
+
+  it 'calculates the coolscore' do
+    expect(subject.score).to eq 20
+  end
+end
+
+describe 'Test score for age 39 to check scores are rounded down' do
+  subject { CoolScore.new("Bob", 39) }
+
+  it 'calculates the coolscore' do
+    expect(subject.score).to eq 19
+  end
+end
