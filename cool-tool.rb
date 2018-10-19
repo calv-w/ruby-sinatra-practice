@@ -15,6 +15,11 @@ class CoolScore
     @name = name
     @age = age
   end
+
+  def score
+    score = 15
+  end
+
 end
 
 #coolscore = CoolScore.new("Bob", 30)
