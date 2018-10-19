@@ -10,4 +10,8 @@ describe 'Cool Score' do
   it "Persons age" do
     expect(subject.age).to eq 30
   end
+
+  it 'calculates the coolscore' do
+    expect(subject.score).to eq 15
+  end
 end
