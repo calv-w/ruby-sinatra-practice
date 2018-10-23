@@ -7,16 +7,17 @@ get '/' do
 end
 # Create our class to calculate the cool score
 class CoolScore
-  attr_accessor :name, :age, :colour
+  attr_accessor :name, :age, :colour, :height
 
-  def initialize(name, age, colour)
+  def initialize(name, age, colour, height)
     @name = name
     @age = age
     @colour = colour
+    @height = height
   end
 
   def score
-    (age * 0.5).floor + name_value + colour_value
+    ((age * 0.5).floor + name_value + colour_value) * height_value
   end
 
   def firstletter
@@ -42,6 +43,14 @@ class CoolScore
       14
     else
       0
+    end
+  end
+
+  def height_value
+    if height.between?(1.5, 1.9)
+      2
+    else
+      1
     end
   end
 end
