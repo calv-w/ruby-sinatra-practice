@@ -3,7 +3,7 @@
 require 'sinatra'
 
 get '/' do
-  'Hello World'
+  erb :cool_tool
 end
 # Create our class to calculate the cool score
 class CoolScore
