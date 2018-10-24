@@ -5,6 +5,16 @@ require 'sinatra'
 get '/' do
   erb :cool_tool
 end
+
+post '/cool_score' do
+  name_input = params[:name]
+  age_input = params[:age].to_f
+  colour_input = params[:colour]
+  height_input = params[:height].to_f / 100
+  score = CoolScore.new(name_input, age_input, colour_input, height_input)
+  erb :cool_score, :locals => {:score => score.score}
+end
+
 # Create our class to calculate the cool score
 class CoolScore
   attr_accessor :name, :age, :colour, :height
