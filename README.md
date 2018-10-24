@@ -51,11 +51,10 @@ The calculation above should produce a numerical cool score as a whole number.
 
 ## Set up:
 
-Sinatra
-1. Install Sinatra by running 'bundle install'
-2. Command 'ruby cool-tool.rb' to start the web server
+### Running the webserver
+1. Install Sinatra by running `bundle install`
+2. Command `ruby cool_tool.rb` to start the web server
 3. Browse to http://localhost:4567
 
-Rspec (confirm with Adrian)
-1. Install rsepc gem (gem 'rspec')
-2. Use command bundle exec rspec to run test script
+### Running the tests
+1. Use command `bundle exec rspec` to run test script
