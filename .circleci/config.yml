@@ -14,11 +14,7 @@ jobs: # a collection of steps
 
     steps: # a collection of executable commands
       - checkout # special step to check out source code to working directory
-      - run:
-          name: Deploy Master to Heroku
-          command: |
-            git push https://heroku:$bf623d74-bb37-409b-a63a-14311420e111@git.heroku.com/$shielded-island-63077.git master
-
+      
       # Which version of bundler?
       - run:
           name: Which bundler?
