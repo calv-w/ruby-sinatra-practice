@@ -64,5 +64,3 @@ class CoolScore
     end
   end
 end
-
-# coolscore = CoolScore.new("Bob", 30)
