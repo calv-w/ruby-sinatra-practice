@@ -114,7 +114,7 @@ end
 describe 'includes height criteria in the score calcualtion' do
   subject { CoolScore.new('Alan', 39, 'Green', 1.5) }
 
-  it 'calculates the coolscore including the colour Green and height between 1.5 and 1.9m' do
-      expect(subject.score).to eq 76
+  it 'calculates the coolscore including the colour Green and height' do
+    expect(subject.score).to eq 76
   end
 end

@@ -12,7 +12,7 @@ post '/cool_score' do
   colour_input = params[:colour]
   height_input = params[:height].to_f / 100
   score = CoolScore.new(name_input, age_input, colour_input, height_input)
-  erb :cool_score, :locals => {:score => score.score}
+  erb :cool_score, locals: { score: score.score }
 end
 
 # Create our class to calculate the cool score
