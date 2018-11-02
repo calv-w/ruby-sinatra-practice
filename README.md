@@ -57,7 +57,7 @@ The calculation above should produce a numerical cool score as a whole number.
 3. Browse to http://localhost:4567
 
 ### Running the tests
-1. Use command `bundle exec rspec` to run test script
+1. Use command `bundle exec rspec` to run test script.
 
 ### Viewing the app
 1. Application is auto-deployed via CircleCi to Heroku: https://shielded-island-63077.herokuapp.com/
