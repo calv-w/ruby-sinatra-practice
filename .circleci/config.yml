@@ -50,7 +50,7 @@ jobs: # a collection of steps
       - store_test_results:
           path: test_results
       # See https://circleci.com/docs/2.0/deployment-integrations/ for example deploy configs
-      - run:
-          name: Deploy Master to Heroku
-          command: |
-            git push https://heroku:bf623d74-bb37-409b-a63a-14311420e111@git.heroku.com/shielded-island-63077.git master
+ #     - run:
+  #        name: Deploy Master to Heroku
+   #       command: |
+    #        git push https://heroku:bf623d74-bb37-409b-a63a-14311420e111@git.heroku.com/shielded-island-63077.git master
