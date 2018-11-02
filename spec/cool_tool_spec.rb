@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../cool_tool.rb'
 
 describe 'Cool Score' do
