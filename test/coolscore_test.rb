@@ -1,44 +1,13 @@
+# this is the test code for the coolscore app
+
+# minitest is a pieced of software that runs tests
 require "minitest/autorun"
 
-class CalcScore
+# coolscore.rb is the actual code which is related
+require_relative '../coolscore.rb'
 
-  def calculate(name,age,colour,height)
-    coolscore = 0    
-    if name =~ /\A[Aa]/
-     coolscore += 10
-    end
-    if name =~ /[Nn]\z/
-      coolscore += 14
-    end
 
-    #Add in age factor
-    coolscore += (age * 0.5).floor
-
-    #Add on by colour
-    case colour
-    when 'Red'
-      coolscore +=3
-    when 'Orange'
-      coolscore +=5
-    when 'Blue'
-      coolscore -=1
-    when 'Green'
-      coolscore -=5
-    end
-
-    #Double if height between 1.5 and 1.9
-    if height.between?(1.5,1.9)
-      coolscore  = coolscore * 2
-    end
-
-    puts "coolscore is #{coolscore}"
-    coolscore
-    
-  end
-
-end
-
-class WendyCoolScore < Minitest::Test
+class CoolScoreTest < Minitest::Test
   def test_zero_score
     puts "this is the zero test"
     score = CalcScore.new
