@@ -6,7 +6,6 @@ require "minitest/autorun"
 # coolscore.rb is the actual code which is related
 require_relative '../coolscore.rb'
 
-
 class CoolScoreTest < Minitest::Test
   def test_zero_score
     puts "this is the zero test"
