@@ -49,4 +49,17 @@ class CoolScoreTest < Minitest::Test
     score = CalcScore.new
     assert_equal(20, score.calculate('Anne', 0, 'Yellow', 1.6))
   end
+
+  def test_convstring
+    puts 'this is the age test converting from string - expecting 5'
+    score = CalcScore.new
+    assert_equal(5, score.calculate('Harry', '11', 'Yellow', 1))
+  end
+
+  def test_height
+    puts 'this is the height test converting from string - expecting 20'
+    score = CalcScore.new
+    assert_equal(20, score.calculate('Anne', 0, 'Yellow', '1.6'))
+  end
+
 end
