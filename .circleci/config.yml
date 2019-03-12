@@ -39,14 +39,18 @@ jobs:
       - run:
           name: run tests
           command: |
-            mkdir /tmp/test-results
-            TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | \
-              circleci tests split --split-by=timings)"
-            bundle exec rspec \
-              --format progress \
-              --out /tmp/test-results/rspec.xml \
-              --format progress \
-              $TEST_FILES
+            #  mkdir /tmp/test-results
+            #  TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | \
+            #   circleci tests split --split-by=timings)"
+            #bundle exec rspec \
+            #  --format progress \
+            #  --out /tmp/test-results/rspec.xml \
+            #  --format progress \
+            #  $TEST_FILES
+            
+            # Use minitest / rake instead of rspce
+            rake
+          
       # collect reports
       - store_test_results:
           path: /tmp/test-results
